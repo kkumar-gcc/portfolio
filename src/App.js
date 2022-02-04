@@ -1,5 +1,6 @@
-import Header from "./components/header/header";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+// import Header from "./components/header/header";
+
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from './pages/home';
 import Work from './pages/work';
 import Resume from './pages/resume';
@@ -24,7 +25,7 @@ function App() {
     </div>
 
 
-  );
+  )
 }
 
 export default App;

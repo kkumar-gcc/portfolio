@@ -1,0 +1,61 @@
+
+@import url('../../app.css');
+
+.home-container {
+    margin: 10px;
+    padding: 10px;
+    color: white;
+    font-family: var(--font-secondary);
+    display: flex;
+    flex-direction: row;
+}
+
+.home-left-container {
+    flex: 60%;
+    padding: 10px;
+    margin: 100px 10px 10px 10px;
+    
+}
+
+.home-right-container {
+    flex: 40%;
+}
+
+.home-container .home-left-container .home-subtitle {
+    color: var(--color-lightn);
+    display: block;
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+
+.home-container .home-left-container h1 {
+    font-size: 50px;
+}
+
+.home-container .home-left-container .home-title-name {
+    color: var(--text-color);
+}
+.home-right-container{
+    padding: 10px;
+    margin: 10px;
+}
+.home-right-container .image-container{
+    padding: 10px;
+    margin: 5px;
+    background: var(--background-color-1);
+    box-shadow: var(--shadow-1);
+    text-align: center;
+}
+
+@media only screen and (max-width: 1040px) {
+     
+    .home-container{
+        flex-direction: column-reverse;
+    }
+    
+}

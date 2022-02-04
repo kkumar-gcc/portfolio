@@ -1,12 +1,12 @@
 import Header from "../components/header/header";
-
+import Blog from "../components/blog/blog";
 function Home() {
-    return(
-        <>
-          <Header />
-        </>
-       
-    )
+  return (
+    <>
+      <Blog />
+      <Header />
+    </>
+  );
 }
 
 export default Home;

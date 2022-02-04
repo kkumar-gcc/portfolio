@@ -1,12 +1,12 @@
 import "./header.css";
 import { useEffect } from "react";
 import Draggable from "react-draggable";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 function Header() {
   useEffect(() => {
     const toggle = document.querySelector(".toggle");
     const icon = document.querySelectorAll(".icon");
-    const nav = document.querySelector(".nav");
+    // const nav = document.querySelector(".nav");
     console.log(toggle);
     toggle.onclick = (e) => {
       toggle.classList.toggle("active");
