@@ -5,7 +5,7 @@ function Home() {
     return(
         <>
         <About />
-         <Header />
+         {/* <Header /> */}
         </>
        
     )

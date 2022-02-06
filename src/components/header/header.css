@@ -3,7 +3,6 @@
 body {
     margin: 0px;
     padding: 0px;
-    background: var(--background-color-2);
 }
 
 li {
@@ -14,8 +13,6 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* position: relative; */
-    /* position: absolute; */
     position:fixed;
     top: -80px;
     right: 20px;
@@ -25,7 +22,7 @@ li {
     transition: background-color 0.5s;
     transition-delay: 0.3s;
     border-radius: 50%;
-    z-index: 10000;
+    z-index: 1000;
    
 }
 
@@ -34,17 +31,17 @@ li {
 
 }
 
-ion-icon {
-    background: var(--background-color-1);
+.menu ion-icon {
     width: 2rem;
     height: 2rem;
     padding: 0.5rem;
     font-size: 1rem;
     border-radius: 50%;
     transition: background-color 250ms linear;
-    -webkit-box-shadow: var(--shadow-2);
-    box-shadow: var(--shadow-2);
-    color: white;
+    color: var(--baseDark2);
+    background: var(--base2);
+    border: 2px solid var(--base2);
+    box-shadow: var(--base-shadow);
 }
 
 .menu .toggle {
@@ -87,15 +84,17 @@ ion-icon {
     z-index: 1001;
 }
 
-.menu .toggle ion-icon:hover {
-    /* background-color: rgb(206, 89, 206); */
+.menu .toggle ion-icon:hover{
+    outline: none;
+    box-shadow: var(--base-shadow-active);
     color: #ff014f;
-    box-shadow: var(--shadow-1);
-    background: var(--background-color-1);
+    border-color: var(--base3);
 }
 
 .menu .icon.active ion-icon:hover {
+    outline: none;
+    box-shadow: var(--base-shadow-active);
+   
     color: #ff014f;
-    box-shadow: var(--shadow-1);
-    background: var(--background-color-1);
+    border-color: var(--base3);
 }

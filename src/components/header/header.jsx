@@ -17,7 +17,7 @@ function Header() {
   });
   return (
     <>
-      <Draggable defaultPosition={{ x: 40, y: 40 }}>
+      <Draggable defaultPosition={{ x: 40, y: 40 }} bounds={{ right: 90}} >
         <div className="menu draggable">
           <div className="toggle nav">
             {/* <ion-icon name="add-outline"></ion-icon> */}

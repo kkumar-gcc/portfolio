@@ -1,1 +1,79 @@
 @import url('../../app.css');
+
+/* .contact{
+    color: white;
+} */
+
+
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="text"],
+textarea {
+    background: transparent;
+    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--radius);
+    box-shadow: none;
+    font-size: var(--font-size-b2);
+    font-weight: 400;
+    height: auto;
+    line-height: 28px;
+    outline: none;
+    padding: 0 15px;
+}
+
+.form-group input {
+    background-color: var(--color-lightest);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: var(--font-size-b2);
+    height: 50px;
+    padding: 0 20px;
+    transition: var(--transition);
+}
+
+.contact-form-wrapper{
+    margin: 10px;
+}
+.contact-form-wrapper input {
+    background-color: #191b1e;
+    border: 2px solid #191b1e;
+    border-radius: 6px;
+    box-shadow: var(--inner-shadow);
+    color: var(--color-lightn);
+    font-family: var(--font-secondary);
+    font-size: 26px;
+    height: 55px;
+    letter-spacing: 1px;
+    padding: 0 15px;
+    transition: var(--transition);
+}
+
+.contact-form-wrapper label {
+    color: #a0a8b3;
+    display: block;
+    font-family: var(--font-secondary);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    text-align: left;
+    text-transform: uppercase;
+}
+.contact-form-wrapper textarea {
+    background-color: #191b1e;
+    border: 2px solid #191b1e;
+    border-radius: 6px;
+    box-shadow: var(--inner-shadow);
+    color: var(--color-lightn);
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 18px;
+    min-height: 235px;
+    padding: 10px 15px;
+    resize: none;
+    /* width: 100%; */
+    transition: var(--transition);
+  }

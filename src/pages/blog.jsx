@@ -4,7 +4,7 @@ function Home() {
   return (
     <>
       <Blog />
-      <Header />
+      {/* <Header /> */}
     </>
   );
 }
