@@ -174,9 +174,7 @@ function App() {
           <ion-icon name="logo-linkedin" style={{ color: '#0e76a8' }}></ion-icon>
         </a>
         <a href="#" className="btn">
-
-          <ion-icon name="aperture-outline" style={{ color: '#ee4056' }}></ion-icon>
-
+          <ion-icon name="logo-github" style={{ color: '#AD5C51' }}></ion-icon>
         </a>
         <a href="#" className="btn">
           <ion-icon name="mail"></ion-icon>

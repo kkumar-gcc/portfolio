@@ -11,6 +11,7 @@ body {
     --primary3: #ff3d00;
     --textColor1: #ff2a6c;
     --textColor2: #0f0005;
+    --textColor3:rgb(236, 232, 232);
     --primaryDark1: #ba2d00;
     --primaryDark2: #741c00;
     --primaryDark3: #5c2511;
@@ -23,7 +24,8 @@ body {
     --base2: #233541;
     --base3: #162128;
     --textColor1: #ff014f;
-    --textCOlor2: #462831;
+    --textColor2: #462831;
+    --textColor3:rgb(59, 59, 59);
     --baseDark1: #eceeef;
     --baseDark2: #b3bcc2;
     --baseDark3: #7a8a94;
