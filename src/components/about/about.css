@@ -71,9 +71,56 @@
     width: 1.5rem;
     height: 1.5rem;
     margin: auto auto -7px auto;
-    /* padding: 0.3rem; */
+    
     font-size: 1rem;
     transition: background-color 250ms linear;
     color: var(--baseDark2);
+}
+
+.more-title h3{
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.more-content{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding: 10px;
+    
+}
+
+.more-row{
+    flex: 45%;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    padding: 20px;
+    margin: 10px 20px;
+    position: relative;
+    box-shadow: var(--base-shadow);
+    transition: box-shadow 0.6s cubic-bezier(.79, .21, .06, .81);
+    border-radius: 10px;
+
+}
+.more-row ion-icon{
+    width: 3rem;
+    height: 3rem;
+    margin: auto;
+
+    font-size: 2rem;
+    transition: background-color 250ms linear;
+    color: var(--textColor1);
+}
+.more-row h3{
+    font-size: 20px;
+    font-weight: 700;
+}
+.more-row p{
+    text-align: justify;
 }
 

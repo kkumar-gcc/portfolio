@@ -25,12 +25,29 @@ function About() {
               you will find useful tips, my travel experiences, life hacks and
               the usual daily thoughts about everything that surrounds me.
             </p>
-            <button className="btn btn2" style={{ color:"var(--textColor1)",textTransform:"uppercase" }}><ion-icon name="download-outline" style={{ color:"var(--textColor1)" }}></ion-icon> Download resume</button>
+            <button className="btn btn2" style={{ color: "var(--textColor1)", textTransform: "uppercase" }}><ion-icon name="download-outline" style={{ color: "var(--textColor1)" }}></ion-icon> Download resume</button>
           </div>
-          <div className="about-content-right"></div>
+          <div className="about-content-right">
+
+          </div>
         </div>
-       
-     
+        <div className="more-title">
+          <h3>What I am Doing</h3>
+        </div>
+        <div className="more-content">
+          <div className="more-row">
+            <ion-icon name="create-outline"></ion-icon>
+            <h3>Web Design Full stack</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore dolorum atque dicta distinctio mollitia fuga.</p>
+          </div>
+          <div className="more-row">
+            <ion-icon name="logo-designernews"></ion-icon>
+            <h3>Web Design Full stack</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore dolorum atque dicta distinctio mollitia fuga.</p>
+
+          </div>
+        </div>
+
       </div>
     </>
   );
