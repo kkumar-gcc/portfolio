@@ -1,79 +1,89 @@
 @import url('../../app.css');
 
-/* .contact{
-    color: white;
-} */
+.contact-container {
+    margin: 10px;
+    padding: 10px;
 
-
-input[type="email"],
-input[type="number"],
-input[type="password"],
-input[type="tel"],
-input[type="text"],
-textarea {
-    background: transparent;
-    border: var(--border-width) solid var(--color-border);
-    border-radius: var(--radius);
-    box-shadow: none;
-    font-size: var(--font-size-b2);
-    font-weight: 400;
-    height: auto;
-    line-height: 28px;
-    outline: none;
-    padding: 0 15px;
 }
 
-.form-group input {
-    background-color: var(--color-lightest);
-    border: 1px solid transparent;
-    border-radius: 4px;
-    font-size: var(--font-size-b2);
-    height: 50px;
-    padding: 0 20px;
-    transition: var(--transition);
-}
-
-.contact-form-wrapper{
+.contact-title {
+    text-align: center;
+    padding: 10px;
     margin: 10px;
 }
-.contact-form-wrapper input {
-    background-color: #191b1e;
-    border: 2px solid #191b1e;
-    border-radius: 6px;
-    box-shadow: var(--inner-shadow);
-    color: var(--color-lightn);
-    font-family: var(--font-secondary);
-    font-size: 26px;
-    height: 55px;
-    letter-spacing: 1px;
-    padding: 0 15px;
-    transition: var(--transition);
+
+.contact-title h1 {
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
-.contact-form-wrapper label {
-    color: #a0a8b3;
-    display: block;
-    font-family: var(--font-secondary);
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    margin-bottom: 14px;
-    text-align: left;
-    text-transform: uppercase;
+.contact-content {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+
 }
-.contact-form-wrapper textarea {
-    background-color: #191b1e;
-    border: 2px solid #191b1e;
-    border-radius: 6px;
-    box-shadow: var(--inner-shadow);
-    color: var(--color-lightn);
-    font-family: var(--font-secondary);
-    font-size: 14px;
-    letter-spacing: 1px;
-    line-height: 18px;
-    min-height: 235px;
-    padding: 10px 15px;
-    resize: none;
-    /* width: 100%; */
-    transition: var(--transition);
-  }
+
+.contact-left-container {
+    flex: 40%;
+    margin: 10px;
+    padding: 10px;
+
+}
+
+.contact-right-container {
+    flex: 55%;
+    margin: 10px;
+    padding: 10px;
+}
+
+.contact-form-wrapper {
+    margin: 5px;
+    padding: 10px;
+
+}
+
+.search {
+    grid-column: 0.75;
+    grid-row: 0.6666666667;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search_input {
+    width: 80%;
+    height: 4rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    padding-left: 3.8rem;
+    box-shadow: var(--base-shadow-active);
+    background: none;
+    font-family: inherit;
+    color: var(--baseDark2);
+}
+
+.search_input::placeholder {
+    color: var(--greyLight-3);
+}
+
+.search_input:focus {
+    outline: none;
+
+    box-shadow: var(--base-shadow);
+}
+
+.search_input:focus+.search__icon {
+    color: var(--primary);
+}
+
+.search_icon {
+    height: 2rem;
+    position: absolute;
+    font-size: 2rem;
+    padding: 0 1rem;
+    display: flex;
+    color: var(--baseDark2);
+    transition: 0.3s ease;
+}

@@ -110,7 +110,7 @@
 .more-row ion-icon{
     width: 3rem;
     height: 3rem;
-    margin: auto;
+    margin: 20px auto;
 
     font-size: 2rem;
     transition: background-color 250ms linear;
