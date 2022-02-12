@@ -16,27 +16,27 @@ function Contact() {
           </div>
           <div className='contact-right-container'>
             <div className="contact-form-wrapper search">
-              <input type="text" className='search_input' placeholder='YOUR NAME' />
-              <div class="search_icon">
+              <input type="text" className='form_input' placeholder='YOUR NAME' />
+              <div className="form_icon">
                 <ion-icon name="person-outline"></ion-icon>
               </div>
             </div>
             <div className="contact-form-wrapper search">
-              <input type="email" className='search_input' placeholder='YOUR EMAIL' />
-              <div class="search_icon">
+              <input type="email" className='form_input' placeholder='YOUR EMAIL' />
+              <div className="form_icon">
                 <ion-icon name="mail-outline"></ion-icon>
               </div>
             </div>
             <div className="contact-form-wrapper search">
-              <input type="text" className='search_input' placeholder='YOUR SUBJECT' />
-              <div class="search_icon">
+              <input type="text" className='form_input' placeholder='YOUR SUBJECT' />
+              <div className="form_icon">
                 <ion-icon name="reader-outline"></ion-icon>
               </div>
             </div>
 
             <div className="contact-form-wrapper">
               
-              <textarea name="" id="" cols="30" rows="30" className='search_input' placeholder='YOUR MESSAGE....'></textarea>
+              <textarea name="" id="" cols="30" rows="30" className='form_input_area' placeholder='YOUR MESSAGE....'></textarea>
             </div>
           </div>
         </div>

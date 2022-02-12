@@ -51,7 +51,7 @@
     align-items: center;
 }
 
-.search_input {
+.form_input {
     width: 80%;
     height: 4rem;
     border: none;
@@ -64,26 +64,37 @@
     color: var(--baseDark2);
 }
 
-.search_input::placeholder {
+.form_input::placeholder {
     color: var(--greyLight-3);
 }
 
-.search_input:focus {
+.form_input:focus {
     outline: none;
 
     box-shadow: var(--base-shadow);
 }
 
-.search_input:focus+.search__icon {
-    color: var(--primary);
+.form_input:focus+.form_icon {
+    color: var(--base3);
 }
 
-.search_icon {
+.form_icon{
+    width: 2rem;
     height: 2rem;
     position: absolute;
     font-size: 2rem;
     padding: 0 1rem;
     display: flex;
-    color: var(--baseDark2);
+    color: var(--textColor2);
     transition: 0.3s ease;
+}
+.form_icon ion-icon{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: auto;
+    padding: 0.3rem;
+    font-size: 1rem;
+    transition: background-color 250ms linear;
+    color: var(--baseDark2);
+   
 }
