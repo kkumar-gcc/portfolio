@@ -72,7 +72,9 @@ body {
     -moz-box-sizing: content-box;
     box-sizing: content-box;
 } */
-
+.row > * {
+    flex-shrink: 2;
+}
 body {
     margin: 0px;
     padding: 0px;

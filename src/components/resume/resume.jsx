@@ -1,9 +1,81 @@
 import "./resume.css";
-import { saveAs } from 'file-saver';
+import { saveAs } from "file-saver";
 function Resume() {
-    
   return (
     <>
+      <div className="skill-title">
+        <h1>Experience & Education</h1>
+      </div>
+      <div className="experience">
+        <div className="experience-card">
+          <span>2017-2018</span>
+          <h2>Education Quality</h2>
+          <div className="resume-card">
+            <h3 className="card-title">Personal Portfolio April Fools</h3>
+            <span>University of DVI (1997 - 2001)</span>
+            <hr></hr>
+            <p>
+              The education should be very interactual. Ut tincidunt est ac
+              dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem
+              in, lobortis mauris hendrerit ante.
+            </p>
+          </div>
+          <div className="resume-card">
+            <h3 className="card-title">Personal Portfolio April Fools</h3>
+            <span>University of DVI (1997 - 2001)</span>
+            <hr></hr>
+            <p>
+              The education should be very interactual. Ut tincidunt est ac
+              dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem
+              in, lobortis mauris hendrerit ante.
+            </p>
+          </div>
+          <div className="resume-card">
+            <h3 className="card-title">Personal Portfolio April Fools</h3>
+            <span>University of DVI (1997 - 2001)</span>
+            <hr></hr>
+            <p>
+              The education should be very interactual. Ut tincidunt est ac
+              dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem
+              in, lobortis mauris hendrerit ante.
+            </p>
+          </div>
+        </div>
+        <div className="experience-card">
+          <span>2017-2018</span>
+          <h2>Education Quality</h2>
+          <div className="resume-card">
+            <h3 className="card-title">Personal Portfolio April Fools</h3>
+            <span>University of DVI (1997 - 2001)</span>
+            <hr></hr>
+            <p>
+              The education should be very interactual. Ut tincidunt est ac
+              dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem
+              in, lobortis mauris hendrerit ante.
+            </p>
+          </div>
+          <div className="resume-card">
+            <h3 className="card-title">Personal Portfolio April Fools</h3>
+            <span>University of DVI (1997 - 2001)</span>
+            <hr></hr>
+            <p>
+              The education should be very interactual. Ut tincidunt est ac
+              dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem
+              in, lobortis mauris hendrerit ante.
+            </p>
+          </div>
+          <div className="resume-card">
+            <h3 className="card-title">Personal Portfolio April Fools</h3>
+            <span>University of DVI (1997 - 2001)</span>
+            <hr></hr>
+            <p>
+              The education should be very interactual. Ut tincidunt est ac
+              dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem
+              in, lobortis mauris hendrerit ante.
+            </p>
+          </div>
+        </div>
+      </div>
       <div className="skill-title">
         <h1>My Skills</h1>
       </div>
@@ -157,10 +229,8 @@ function Resume() {
           </h1>
         </div>
       </div>
-      <div className="experience-title">
-        <h1>Experience & Education</h1>
-      </div>
-       </>
+    
+    </>
   );
 }
 

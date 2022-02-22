@@ -7,6 +7,7 @@ import Resume from './pages/resume';
 import About from './pages/about';
 import Blog from './pages/blog';
 import Contact from './pages/contact';
+import Example from './pages/Canvas';
 import { useEffect } from "react";
 
 function App() {
@@ -156,6 +157,7 @@ function App() {
           <Route path='/resume' element={<Resume />} />
           <Route path='/blog' element={<Blog />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/convas' element={<Example placement="new titile"/>}/>
         </Routes>
       </Router>
 

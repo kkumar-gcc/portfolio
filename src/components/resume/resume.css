@@ -1,11 +1,14 @@
 @import url('../../app.css');
 
-
+.skill-title{
+    padding: 20px;
+    margin: 30px auto 20px auto;
+}
 .skill-title h1 {
     /* font-size: 30px; */
     font-weight: 700;
     font-size: 3.5rem;
-    margin-top: 10px;
+    
 
     text-transform: uppercase;
     text-align: center;
@@ -217,3 +220,55 @@ svg circle {
         stroke-dashoffset: calc(630px - (630px * 40) / 100);
     }
 }
+
+.experience{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding: 5px;
+}
+.experience-card{
+    flex: 48%;
+    padding: 10px;
+    margin: 10px;
+    padding: 10px;
+ 
+}
+.experience-card .resume-card{
+    justify-content: space-around;
+    align-items: center;
+    text-align: justify;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: var(--base-shadow);
+    transition: box-shadow 0.6s cubic-bezier(.79, .21, .06, .81);
+    border-radius: 10px;
+}
+.experience-card .resume-card:hover{
+    box-shadow: var(--base-shadow-active);
+}
+.experience-card span{
+    font-weight: 700;
+    color: var(--textColor1);
+}
+.experience-card h2{
+    font-weight: 700;
+}
+.experience-card .resume-card .card-title{
+    margin-bottom: 5px;
+    font-weight: 600;
+    word-spacing: 2px;
+}
+.experience-card .resume-card span{
+    padding-bottom: 5px;
+    word-spacing: 3px;
+    color: var(--baseDark3);
+}
+.experience-card .resume-card hr{
+    margin: 40px auto;
+}
+.experience-card .resume-card p{
+    word-spacing: 3px;
+    line-height: 1.2;
+}
+
