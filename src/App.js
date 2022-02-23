@@ -9,6 +9,7 @@ import Blog from './pages/blog';
 import Contact from './pages/contact';
 import Example from './pages/Canvas';
 import { useEffect } from "react";
+import NotFound from "./pages/notfound";
 
 function App() {
   useEffect(() => {
@@ -158,6 +159,7 @@ function App() {
           <Route path='/blog' element={<Blog />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/convas' element={<Example placement="new titile"/>}/>
+          <Route path ="*" exact element={<NotFound />}/>
         </Routes>
       </Router>
 
