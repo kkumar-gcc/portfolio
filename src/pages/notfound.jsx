@@ -1,10 +1,11 @@
+import Error from "../components/error/404";
 
 
 function NotFound(){
     return (
-        <div>
-            not found
-        </div>
+       <>
+            <Error />
+       </>
     )
 }
 

@@ -1,13 +1,13 @@
 // import Header from "./components/header/header";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from './pages/home';
-import Work from './pages/work';
-import Resume from './pages/resume';
-import About from './pages/about';
-import Blog from './pages/blog';
-import Contact from './pages/contact';
-import Example from './pages/Canvas';
+import Home from "./pages/home";
+import Work from "./pages/work";
+import Resume from "./pages/resume";
+import About from "./pages/about";
+import Blog from "./pages/blog";
+import Contact from "./pages/contact";
+import Example from "./pages/Canvas";
 import { useEffect } from "react";
 import NotFound from "./pages/notfound";
 
@@ -17,12 +17,12 @@ function App() {
       delay: 8,
       _x: 0,
       _y: 0,
-      endX: (window.innerWidth / 2),
-      endY: (window.innerHeight / 2),
+      endX: window.innerWidth / 2,
+      endY: window.innerHeight / 2,
       cursorVisible: true,
       cursorEnlarged: false,
-      $dot: document.querySelector('.cursor-dot'),
-      $outline: document.querySelector('.cursor-dot-outline'),
+      $dot: document.querySelector(".cursor-dot"),
+      $outline: document.querySelector(".cursor-dot-outline"),
 
       init: function () {
         // Set up element sizes
@@ -33,34 +33,32 @@ function App() {
         this.animateDotOutline();
       },
 
-
       setupEventListeners: function () {
         var self = this;
 
         // Anchor hovering
-        document.querySelectorAll('a').forEach(function (el) {
-          el.addEventListener('mouseover', function () {
+        document.querySelectorAll("a").forEach(function (el) {
+          el.addEventListener("mouseover", function () {
             self.cursorEnlarged = true;
             self.toggleCursorSize();
           });
-          el.addEventListener('mouseout', function () {
+          el.addEventListener("mouseout", function () {
             self.cursorEnlarged = false;
             self.toggleCursorSize();
           });
         });
 
         // Click events
-        document.addEventListener('mousedown', function () {
+        document.addEventListener("mousedown", function () {
           self.cursorEnlarged = true;
           self.toggleCursorSize();
         });
-        document.addEventListener('mouseup', function () {
+        document.addEventListener("mouseup", function () {
           self.cursorEnlarged = false;
           self.toggleCursorSize();
         });
 
-
-        document.addEventListener('mousemove', function (e) {
+        document.addEventListener("mousemove", function (e) {
           // Show the cursor
           self.cursorVisible = true;
           self.toggleCursorVisibility();
@@ -68,19 +66,19 @@ function App() {
           // Position the dot
           self.endX = e.pageX;
           self.endY = e.pageY;
-          self.$dot.style.top = self.endY + 'px';
-          self.$dot.style.left = self.endX + 'px';
+          self.$dot.style.top = self.endY + "px";
+          self.$dot.style.left = self.endX + "px";
         });
 
         // Hide/show cursor
-        document.addEventListener('mouseenter', function (e) {
+        document.addEventListener("mouseenter", function (e) {
           self.cursorVisible = true;
           self.toggleCursorVisibility();
           self.$dot.style.opacity = 1;
           self.$outline.style.opacity = 1;
         });
 
-        document.addEventListener('mouseleave', function (e) {
+        document.addEventListener("mouseleave", function (e) {
           self.cursorVisible = true;
           self.toggleCursorVisibility();
           self.$dot.style.opacity = 0;
@@ -93,8 +91,8 @@ function App() {
 
         self._x += (self.endX - self._x) / self.delay;
         self._y += (self.endY - self._y) / self.delay;
-        self.$outline.style.top = self._y + 'px';
-        self.$outline.style.left = self._x + 'px';
+        self.$outline.style.top = self._y + "px";
+        self.$outline.style.left = self._x + "px";
 
         requestAnimationFrame(this.animateDotOutline.bind(self));
       },
@@ -103,11 +101,11 @@ function App() {
         var self = this;
 
         if (self.cursorEnlarged) {
-          self.$dot.style.transform = 'translate(-50%, -50%) scale(0.75)';
-          self.$outline.style.transform = 'translate(-50%, -50%) scale(1.5)';
+          self.$dot.style.transform = "translate(-50%, -50%) scale(0.75)";
+          self.$outline.style.transform = "translate(-50%, -50%) scale(1.5)";
         } else {
-          self.$dot.style.transform = 'translate(-50%, -50%) scale(1)';
-          self.$outline.style.transform = 'translate(-50%, -50%) scale(1)';
+          self.$dot.style.transform = "translate(-50%, -50%) scale(1)";
+          self.$outline.style.transform = "translate(-50%, -50%) scale(1)";
         }
       },
 
@@ -121,73 +119,79 @@ function App() {
           self.$dot.style.opacity = 0;
           self.$outline.style.opacity = 0;
         }
-      }
-    }
+      },
+    };
 
     cursor.init();
+    
+    /* theme switcher */
+    document.querySelector(".theme-switcher-btn").onclick = () => {
+      document.querySelector(".theme-switcher").classList.toggle("active");
+      document.querySelector(".theme-switcher-btn").classList.toggle("active");
+    };
     let darkTheme = false;
 
     const themeToggle = document.getElementById("toggleTheme");
 
     themeToggle.addEventListener("click", function () {
       darkTheme = !darkTheme;
-      darkTheme ? document.body.setAttribute('data-theme', 'dark') : document.body.removeAttribute('data-theme');
+      darkTheme
+        ? document.body.setAttribute("data-theme", "dark")
+        : document.body.removeAttribute("data-theme");
       themeToggle.checked = darkTheme;
+      
     });
 
-
-  })
+    
+   
+  });
   return (
-
-    <div className="App">
-      {/* <div className="cursor"></div> */}
-      <div className="cursor-dot-outline"></div>
-      <div className="cursor-dot"></div>
-      <div className="theme">
-        <div id="toggle">
-          <input type="checkbox" id="toggleTheme" />
-          <label for="toggleTheme" tabIndex="1" title="Dark mode toggle"></label>
+    <>
+      <div className="App">
+        <div className="wrapper">
+          <div className="ribbon-wrapper-green">
+            <div className="ribbon-green">
+              {" "}
+              <a href="https://github.com/kkumar-gcc" target={"_blank"}>
+                Github
+              </a>
+            </div>
+          </div>
         </div>
+        {/* <div className="cursor"></div> */}
+        <div className="cursor-dot-outline"></div>
+        <div className="cursor-dot"></div>
+      
+        <div className="theme-switcher">
+         
+          <h3>THEME</h3>
+          <div className="theme-buttons-container">
+          {/* <ion-icon name="sunny-outline"></ion-icon> */}
+            <ion-icon name="moon-outline" id="toggleTheme"></ion-icon>
+          </div>
+          <div className="theme-switcher-btn">
+            <ion-icon name="settings-outline"></ion-icon>
+          </div>
+        </div>
+
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" exact element={<About />} />
+            <Route path="/work" element={<Work />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route
+              path="/convas"
+              element={<Example placement="new titile" />}
+            />
+            <Route path="*" exact element={<NotFound />} />
+          </Routes>
+        </Router>
       </div>
-
-      <Router>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' exact element={<About />} />
-          <Route path='/work' element={<Work />} />
-          <Route path='/resume' element={<Resume />} />
-          <Route path='/blog' element={<Blog />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/convas' element={<Example placement="new titile"/>}/>
-          <Route path ="*" exact element={<NotFound />}/>
-        </Routes>
-      </Router>
-
-      <div className="frame">
-        <a href="#" className="btn">
-          <ion-icon name="logo-facebook" style={{ color: '#3b5998' }}></ion-icon>
-
-        </a>
-        <a href="#" className="btn">
-          <ion-icon name="logo-twitter" style={{ color: '#00acee' }}></ion-icon>
-        </a>
-        <a href="#" className="btn">
-          <ion-icon name="logo-dribbble" style={{ color: ' #ea4c89' }}></ion-icon>
-        </a>
-        <a href="#" className="btn">
-          <ion-icon name="logo-linkedin" style={{ color: '#0e76a8' }}></ion-icon>
-        </a>
-        <a href="#" className="btn">
-          <ion-icon name="logo-github" style={{ color: '#AD5C51' }}></ion-icon>
-        </a>
-        <a href="#" className="btn">
-          <ion-icon name="mail"></ion-icon>
-        </a>
-      </div>
-    </div>
-
-
-  )
+    </>
+  );
 }
 
 export default App;

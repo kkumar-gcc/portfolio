@@ -31,6 +31,7 @@ function OffCanvasExample({ name, ...props }) {
         {['top'].map((placement, idx) => (
           <OffCanvasExample key={idx} placement={placement} name={placement} />
         ))}
+        
       </>
     );
   }
