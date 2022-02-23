@@ -18,7 +18,7 @@ function Error() {
       </p>
       </section>
       <div class="link-container">
-      <button><Link to="/" className="more-link">Go to HOME</Link></button>
+     <Link to="/" className="more-link"> <button>Go to HOME</button></Link>
         
   
       </div>

@@ -819,3 +819,6 @@ body {
 .theme-buttons-container ion-icon{
     padding: 10px;
 }
+.theme-buttons-container ion-icon:hover{
+    color: var(--textColor1);
+}

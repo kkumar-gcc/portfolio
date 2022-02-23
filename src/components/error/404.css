@@ -178,12 +178,7 @@ h1 {
   color: var(--textColor1);
   letter-spacing: 1px;
 }
-
-.yourdiv {
-  /* top: 50%;
-  right: 50%; */
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  transform: rotate(45deg);
-  /* filter: progid:DXImageTransform.Microsoft.Matrix(M11='0.7071067811865476', M12='-0.7071067811865475', M21='0.7071067811865475', M22='0.7071067811865476', sizingMethod='auto expand'); */
+.more-link button{
+    color: var(--textColor1);
 }
+
