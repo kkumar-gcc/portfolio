@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Offcanvas, Button } from "react-bootstrap";
-import quote from './../blog/quote.svg';
-// import "./blog.css";
+import quote from "./../blog/quote.svg";
+import "./work.css";
 import BlogData from "./../blog/MOCK_DATA.json";
 function truncate(input) {
   return input?.length > 50 ? `${input.substring(0, 49)} . . .` : input;
@@ -21,7 +21,7 @@ function Work() {
         <div className="row wrap">
           {BlogData.map((blogDetail, index) => {
             return (
-              <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
+              <div key={blogDetail.id} className="col-lg-3 col-md-4 col-sm-6 mb-4">
                 <div className="card">
                   <div className="thumbnail">
                     <a href="">
@@ -49,24 +49,21 @@ function Work() {
                       <Offcanvas.Title> </Offcanvas.Title>
                     </Offcanvas.Header>
                     <Offcanvas.Body>
-                      <div className="post-container">
-                        <div className="skill-title">
+                      <div className="work-container">
+                        {/* <div className="skill-title">
                           <h1>Post Details</h1>
+                        </div> */}
+                        {/* <h3>{blogDetail.title}</h3> */}
+                        <div className="work-left-container">
+                          <img
+                            src={"https://picsum.photos/450/340?person"}
+                            alt=""
+                          />
                         </div>
-                        <h3>{blogDetail.title}</h3>
-                        <img
-                          src={"https://picsum.photos/900/600?person"}
-                          alt=""
-                        />
-                        <p>{blogDetail.desc}</p>
-                        <div class="quotebox">
-                          <div class="icon">
-                            <img src={quote} alt="blog quote" />
-                          </div>
-                          <p>{blogDetail.quote}</p>
+                        <div className="work-right-container">
+                          <p>{blogDetail.title}</p>
+                        <button>view project &gt; </button>
                         </div>
-                     
-                        <p>{blogDetail.desc1}</p>
                       </div>
                     </Offcanvas.Body>
                   </Offcanvas>

@@ -27,7 +27,7 @@ function Home() {
         <div className="home-right-container">
           <div className="image-container">
             <div className="image-inner-container">
-              <img src={"https://picsum.photos/id/1/200/300"} alt="" />
+              <img src={"https://picsum.photos/180/240"} alt="" />
             </div>
           </div>
         </div>

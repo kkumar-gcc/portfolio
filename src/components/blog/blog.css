@@ -132,6 +132,10 @@ a:hover {
   overflow-y: scroll;
 }
 
+/* .offcanvas-header  .btn-close{
+  color: var(--baseDark2);
+} */
+
 .post-container {
   justify-content: space-around;
   align-items: center;
