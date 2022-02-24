@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Offcanvas, Button } from "react-bootstrap";
+import { Offcanvas} from "react-bootstrap";
 import quote from './quote.svg';
 import "./blog.css";
 import BlogData from "./MOCK_DATA.json";
@@ -24,7 +24,7 @@ function Blog() {
               <div key={blogDetail.id} className="col-xl-4 col-lg-6 col-md-12 col-sm-12 mb-4">
                 <div className="card">
                   <div className="thumbnail">
-                    <a href="">
+                    <a href={"#"}>
                       <img
                         src={"https://picsum.photos/180/120?person"}
                         alt=""
