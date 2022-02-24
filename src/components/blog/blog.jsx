@@ -24,7 +24,7 @@ function Blog() {
               <div key={blogDetail.id} className="col-xl-4 col-lg-6 col-md-12 col-sm-12 mb-4">
                 <div className="card">
                   <div className="thumbnail">
-                    <a href={"#"}>
+                    <a href='https://github.com/kkumar-gcc'>
                       <img
                         src={"https://picsum.photos/180/120?person"}
                         alt=""
@@ -38,6 +38,7 @@ function Blog() {
                         variant="primary"
                         onClick={handleShow}
                         className="me-2"
+                        href='https://github.com/kkumar-gcc'
                       >
                         {truncate(blogDetail.title)}
                       </a>

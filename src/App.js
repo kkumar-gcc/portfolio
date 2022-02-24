@@ -172,7 +172,7 @@ function App() {
                 <div className="ribbon-wrapper-green">
                   <div className="ribbon-green">
                     {" "}
-                    <a href={"https://github.com/kkumar-gcc"} target={"_blank"}>
+                    <a href={"https://github.com/kkumar-gcc"} target={"_blank"} rel="noreferrer">
                       Github
                     </a>
                   </div>
