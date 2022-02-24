@@ -6,9 +6,6 @@ function Home() {
     return(
         <>
         <About />
-         {/* <Header /> */}
-
-         <Footer />
         </>
        
     )

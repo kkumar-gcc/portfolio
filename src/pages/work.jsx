@@ -5,9 +5,9 @@ import Work from "../components/work/work";
 function Home() {
     return(
         <>
-          {/* <Header /> */}
+         
           <Work />
-          <Footer />
+          
         </>
        
     )

@@ -10,6 +10,8 @@ import Contact from "./pages/contact";
 import Example from "./pages/Canvas";
 import { useEffect } from "react";
 import NotFound from "./pages/notfound";
+import Header from "./components/header/header";
+import Footer from "./components/footer/footer";
 
 function App() {
   useEffect(() => {
@@ -147,7 +149,9 @@ function App() {
   });
   return (
     <>
+    
       <div className="App">
+        
         <div className="wrapper">
           <div className="ribbon-wrapper-green">
             <div className="ribbon-green">
@@ -175,6 +179,9 @@ function App() {
         </div>
 
         <Router>
+          <div className="homeApp">
+          <Header />
+          <div className="AppContent">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" exact element={<About />} />
@@ -188,6 +195,11 @@ function App() {
             />
             <Route path="*" exact element={<NotFound />} />
           </Routes>
+          <div className="footerIcon"><Footer /></div>
+          
+          </div>
+          
+          </div>
         </Router>
       </div>
     </>

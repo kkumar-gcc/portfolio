@@ -1,72 +1,88 @@
 import "./header.css";
-import { useEffect } from "react";
-import Draggable from "react-draggable";
+// import { useEffect } from "react";
+import "react-icons/fa";
 import { Link } from "react-router-dom";
 function Header() {
-  useEffect(() => {
-    const toggle = document.querySelector(".toggle");
-    const icon = document.querySelectorAll(".icon");
-    // const nav = document.querySelector(".nav");
-    console.log(toggle);
-    toggle.onclick = (e) => {
-      toggle.classList.toggle("active");
-      icon.forEach((i) => {
-        i.classList.toggle("active");
-      });
-    };
-  });
   return (
     <>
-      <Draggable defaultPosition={{ x: 40, y: 40 }} bounds={{ right: 90}} >
-        <div className="menu draggable">
-          <div className="toggle nav">
-            {/* <ion-icon name="add-outline"></ion-icon> */}
-            {/* <ion-icon name="options-outline"></ion-icon> */}
-            <ion-icon name="snow-outline"></ion-icon>
+      <div>
+        <div class="side_bar">
+          <div class="title">
+            <div class="logo">
+               <a href="#">
+                  <img src={"https://picsum.photos/180/240"} alt=""/>
+               </a>
+            
+              
+            </div>
+            <div className="username">
+              <span>Krishan </span>
+            </div>
+            
+            {/* <label class=" button cancel" for="check">
+              <i class="fas fa-times"></i>
+            </label> */}
           </div>
-          <li className="icon" style={{ "--i": "0" }}>
-            <Link to="/">
-              <ion-icon name="home-outline"></ion-icon>
-            </Link>
-          </li>
-          <li className="icon" style={{ "--i": "1" }}>
-            <Link to="/blog">
-              <ion-icon name="aperture-outline"></ion-icon>
-            </Link>
-          </li>
-          {/* <li className="icon" style={{ "--i": "2" }}>
-              <Link to="/contact">
-             
-                <ion-icon name="arrow-redo-outline" aria-label="heart-sharp"></ion-icon>
+          <ul>
+            <li>
+              <Link to="/">
+                <ion-icon name="home-outline"></ion-icon> Home
               </Link>
-            </li> */}
-          <li className="icon" style={{ "--i": "2" }}>
-            <Link to="/about">
-              <ion-icon name="person-outline"></ion-icon>
-            </Link>
-          </li>
-          <li className="icon" style={{ "--i": "3" }}>
-            <Link to="/resume">
-              <ion-icon name="attach-outline"></ion-icon>
-            </Link>
-          </li>
-          {/* <li className="icon" style={{ "--i": "5" }}>
+            </li>
+            <li>
               <Link to="/about">
-                <ion-icon name="bluetooth-outline"></ion-icon>
+                <ion-icon name="person-outline"></ion-icon> About
               </Link>
-            </li> */}
-          <li className="icon" style={{ "--i": "4" }}>
-            <Link to="/contact">
-              <ion-icon name="chatbox-ellipses-outline"></ion-icon>
-            </Link>
-          </li>
-          <li className="icon" style={{ "--i": "5" }}>
-            <Link to="/work">
-              <ion-icon name="school-outline"></ion-icon>
-            </Link>
-          </li>
+            </li>
+            <li>
+              <Link to="/resume">
+                <ion-icon name="home-outline"></ion-icon> Resume
+              </Link>
+            </li>
+            <li>
+              <Link to="/work">
+                <ion-icon name="home-outline"></ion-icon> Work
+              </Link>
+            </li>
+            <li>
+              <Link to="/blog">
+                <ion-icon name="home-outline"></ion-icon> Blog
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact">
+                <ion-icon name="mail-open-outline"></ion-icon> Contact
+              </Link>
+            </li>
+          </ul>
+          <div class="media_icons">
+            <a href="#">
+              <ion-icon
+                name="logo-facebook"
+                style={{ color: "#3b5998" }}
+              ></ion-icon>
+            </a>
+            <a href="#">
+              <ion-icon
+                name="logo-twitter"
+                style={{ color: "#00acee" }}
+              ></ion-icon>
+            </a>
+            <a href="#">
+              <ion-icon
+                name="logo-linkedin"
+                style={{ color: "#0e76a8" }}
+              ></ion-icon>
+            </a>
+            <a href="#">
+              <ion-icon
+                name="logo-github"
+                style={{ color: "#AD5C51" }}
+              ></ion-icon>
+            </a>
+          </div>
         </div>
-      </Draggable>
+      </div>
     </>
   );
 }

@@ -5,8 +5,6 @@ function Home() {
   return (
     <>
       <Landing />
-      {/* <Header /> */}
-      <Footer />
     </>
   );
 }

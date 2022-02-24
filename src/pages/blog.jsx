@@ -5,9 +5,6 @@ function Home() {
   return (
     <>
       <Blog />
-      {/* <Header /> */}
-
-      <Footer/>
     </>
   );
 }

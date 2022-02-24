@@ -5,8 +5,7 @@ function Home() {
   return (
     <>
       <Contact />
-      {/* <Header /> */}
-      <Footer />
+      
     </>
   );
 }

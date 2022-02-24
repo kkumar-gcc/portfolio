@@ -21,7 +21,7 @@ function Work() {
         <div className="row wrap">
           {BlogData.map((blogDetail, index) => {
             return (
-              <div key={blogDetail.id} className="col-lg-3 col-md-4 col-sm-6 mb-4">
+              <div key={blogDetail.id} className="col-lg-4 col-md-12 col-sm-12 mb-4">
                 <div className="card">
                   <div className="thumbnail">
                     <a href="">
