@@ -1,61 +1,75 @@
 import "./header.css";
-// import { useEffect } from "react";
-import "react-icons/fa";
+import { useEffect, useState } from "react";
+// import "react-icons/fa";
+import { ImBlogger } from "react-icons/im";
+import { GoMailRead, GoHome } from "react-icons/go";
+import { IoPersonOutline } from "react-icons/io5";
+import { CgToolbox } from "react-icons/cg";
+import { BsFillFileBarGraphFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
-function Header() {
+const Header = (props) => {
+  const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+  const handleNavCollapse = () => {
+    setIsNavCollapsed(!isNavCollapsed);
+  };
+
   return (
     <>
       <div>
-        <div class="side_bar">
-          <div class="title">
-            <div class="logo">
-               <a href="#">
-                  <img src={"https://picsum.photos/180/240"} alt=""/>
-               </a>
-            
-              
+        <div className="side_bar">
+          <div className="title">
+            <div className="logo">
+              <a href="#">
+                <img src={"https://picsum.photos/180/240"} alt="" />
+              </a>
             </div>
             <div className="username">
               <span>Krishan </span>
             </div>
-            
-            {/* <label class=" button cancel" for="check">
-              <i class="fas fa-times"></i>
-            </label> */}
+
+            <div className="side_bar_toggle" onClick={handleNavCollapse}>
+              <ion-icon
+                name={`${isNavCollapsed ? "menu-outline" : "close-outline"}`}
+              ></ion-icon>
+            </div>
           </div>
-          <ul>
+          <ul className={`${isNavCollapsed ? "is_active" : ""}`}>
             <li>
               <Link to="/">
-                <ion-icon name="home-outline"></ion-icon> Home
+                <GoHome /> Home
               </Link>
             </li>
             <li>
               <Link to="/about">
-                <ion-icon name="person-outline"></ion-icon> About
+                <IoPersonOutline /> About
               </Link>
             </li>
             <li>
               <Link to="/resume">
-                <ion-icon name="home-outline"></ion-icon> Resume
+                <BsFillFileBarGraphFill /> Resume
               </Link>
             </li>
             <li>
               <Link to="/work">
-                <ion-icon name="home-outline"></ion-icon> Work
+                <CgToolbox /> Work
               </Link>
             </li>
             <li>
               <Link to="/blog">
-                <ion-icon name="home-outline"></ion-icon> Blog
+                <ImBlogger /> Blog
               </Link>
             </li>
             <li>
               <Link to="/contact">
-                <ion-icon name="mail-open-outline"></ion-icon> Contact
+                <GoMailRead /> Contact
               </Link>
             </li>
           </ul>
-          <div class="media_icons">
+          <div
+            className={`media_icons ${
+              isNavCollapsed ? "is_active" : ""
+            } media_icons`}
+          >
             <a href="#">
               <ion-icon
                 name="logo-facebook"
@@ -85,5 +99,5 @@ function Header() {
       </div>
     </>
   );
-}
+};
 export default Header;

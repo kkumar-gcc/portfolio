@@ -52,9 +52,10 @@ li {
   margin-top: 45px;
   margin-left: -32px;
   list-style: none;
+  transition: all 3s ease;
 }
 
-.side_bar ul a {
+.side_bar ul a{
   color: var(--baseDark2);
   text-decoration: none;
   display: block;
@@ -67,11 +68,19 @@ li {
   position: relative;
   transition: all 0.2s ease;
 }
-.side_bar ul ion-icon{
+.side_bar ul svg{
+    width: 24px;
+    height: 24px;
+  margin-right: 10px;
+}
+.side_bar ul img {
+    width: 24px;
+    height: 24px;
   margin-right: 10px;
 }
 .media_icons {
   margin-top: 50px;
+  margin-bottom: 50px;
   display: flex;
   justify-content: center;
 }
@@ -91,7 +100,8 @@ li {
   transition: all 0.3s ease;
 }
 .side_bar ul a:hover:before,
-.media_icons a:hover:before {
+.media_icons a:hover:before,
+.side_bar_toggle:hover:before {
   position: absolute;
   content: "";
   top: 0;
@@ -99,7 +109,8 @@ li {
   right: 0;
   bottom: 0;
 }
-.side_bar ul a:hover:before {
+.side_bar ul a:hover:before ,
+.side_bar_toggle:hover:before{
   border-radius: 6px;
  
   border: 2px solid var(--base3);
@@ -113,42 +124,29 @@ li {
 .media_icons a ion-icon{
     width: 2rem;
     height: 2rem;
-    /* padding: 0.5rem; */
     font-size: 1rem;
     margin: 10px;
 }
-.side_bar ul a:hover {
+.side_bar ul a:hover,
+.side_bar_toggle:hover {
     color: var(--textColor1);
 }
-/* 
-.media_icons a:nth-child(1) {
-  color: #4267b2;
-}
-.media_icons a:nth-child(2) {
-  color: #1da1f2;
-}
-.media_icons a:nth-child(3) {
-  color: #e1306c;
-}
-.media_icons a:nth-child(4) {
-  color: #ff0000;
-} */
-label {
-  font-size: 17px;
-  color: #31344b;
-  box-shadow: -3px -3px 7px #ffffff, 3px 3px 5px #ceced1;
-  height: 37px;
-  width: 37px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 37px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-label:hover {
-  box-shadow: inset -3px -3px 7px #ffffff, inset 3px 3px 5px #ceced1;
-  color: #3498db;
-}
+
+
+.side_bar_toggle{
+    color: var(--baseDark2);
+    text-decoration: none;
+    display: none;
+    margin: 5px;
+    margin-left: auto;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 10px 25px;
+    border-radius: 6px;
+    border: 2px solid var(--base3);
+    position: relative;
+    transition: all 0.2s ease;
+  }
 #check {
   display: none;
 }
@@ -159,4 +157,27 @@ label:hover {
 }
 #check:checked ~ .side_bar {
   left: 0;
+}
+
+@media only screen and ( max-width:750px)
+{
+  /* .side_bar .title{
+    display: none;
+  } */
+
+.side_bar{
+    width: auto;
+}
+.side_bar_toggle{
+    display: block;
+    align-items: flex-end;
+}
+.is_active{opacity: 0;
+    transition: opacity 300ms;
+    display: none;
+}
+.not_active{
+    display: block;
+    
+}
 }

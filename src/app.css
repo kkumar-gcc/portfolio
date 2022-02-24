@@ -34,6 +34,9 @@ body {
 body {
   --base-shadow: inset 0px 0px 0px var(--base3), inset 0px 0px 0px var(--base2),
     4px 4px 9px var(--base3), -4px -4px 9px var(--base2);
+    --base-shadow-2:  inset 4px 4px 9px var(--base2),
+    inset -4px -4px 6px var(--base1), 2px 2px 9px var(--base2),
+    -2px -2px 9px var(--base1);
     --base-shadow-1: inset 0px 0px 0px var(--base3), inset 0px 0px 0px var(--base2),
     0px 2px 9px var(--base3), -4px -4px 9px var(--base2);
   --base-shadow-active: inset 4px 4px 9px var(--base3),
@@ -431,12 +434,28 @@ body {
 .btn.active {
   box-shadow: var(--base-shadow-active);
 }
-
+.homeApp{
+  display: flex;
+  flex-direction: row;
+}
+.AppContent {
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: var(--base-shadow);
+  transition: box-shadow 0.6s cubic-bezier(0.79, 0.21, 0.06, 0.81);
+  border-radius: 10px;
+  min-height: 97vh;
+  
+}
 /*tag */
-.wrapper {
+.AppContent .wrapper {
   /* margin: 50px auto; */
   /* width: 280px;
     height: 370px; */
+   
   background: white;
   border-radius: 10px;
   -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
@@ -446,13 +465,13 @@ body {
   z-index: 90000;
 }
 
-.ribbon-wrapper-green {
+.AppContent .ribbon-wrapper-green {
   width: 85px;
   height: 88px;
   overflow: hidden;
   position: absolute;
-  top: 9px;
-  right: 9px;
+  top: 0px;
+  right: 0px;
 }
 
 .ribbon-green {
@@ -581,27 +600,22 @@ body {
 .theme-buttons-container ion-icon:hover{
     color: var(--textColor1);
     border: 2px solid var(--base3);
-    /* box-shadow: var(--base-shadow-active); */
+    box-shadow: var(--base-shadow-2);
 }
+/* .theme-buttons-container:hover:before{
 
-.homeApp{
-  display: flex;
-  flex-direction: row;
-}
-.AppContent {
-  justify-content: space-around;
-  align-items: center;
-  margin: 10px;
-  padding: 10px;
-  box-shadow: var(--base-shadow);
-  transition: box-shadow 0.6s cubic-bezier(0.79, 0.21, 0.06, 0.81);
-  border-radius: 10px;
-  min-height: 97vh;
-}
+  box-shadow: var(--base-shadow-active);
+} */
+
 
 @media only screen and ( max-width:750px)
 {
   .homeApp{
-    flex-direction: column-reverse;
+    /* flex-direction: column-reverse; */
+    flex-direction: column;
+  }
+
+  .footerIcon{
+    display: block;
   }
 }

@@ -107,7 +107,7 @@
 }
 
 .form_input_area {
-    width: 89%;
+    width: 100%;
 
     border: none;
     height: 100px;
@@ -128,4 +128,11 @@
     outline: none;
 
     box-shadow: var(--base-shadow);
+}
+@media only screen and (max-width:1150px){
+.contact-content{
+    flex-direction: column;
+}
+
+
 }

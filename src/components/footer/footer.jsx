@@ -4,7 +4,7 @@ function Footer(){
 
     return (
       
-      <div class="media_icons">
+      <div className="media_icons">
       <a href="#">
         <ion-icon
           name="logo-facebook"

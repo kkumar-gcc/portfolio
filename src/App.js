@@ -125,7 +125,7 @@ function App() {
     };
 
     cursor.init();
-    
+
     /* theme switcher */
     document.querySelector(".theme-switcher-btn").onclick = () => {
       document.querySelector(".theme-switcher").classList.toggle("active");
@@ -141,36 +141,22 @@ function App() {
         ? document.body.setAttribute("data-theme", "dark")
         : document.body.removeAttribute("data-theme");
       themeToggle.checked = darkTheme;
-      
+      document.querySelector(".theme-switcher").classList.remove('active');
+      document.querySelector(".theme-switcher-btn").classList.toggle("active");
+     
     });
-
-    
-   
   });
   return (
     <>
-    
       <div className="App">
-        
-        <div className="wrapper">
-          <div className="ribbon-wrapper-green">
-            <div className="ribbon-green">
-              {" "}
-              <a href="https://github.com/kkumar-gcc" target={"_blank"}>
-                Github
-              </a>
-            </div>
-          </div>
-        </div>
         {/* <div className="cursor"></div> */}
         <div className="cursor-dot-outline"></div>
         <div className="cursor-dot"></div>
-      
+
         <div className="theme-switcher">
-         
           <h3>THEME</h3>
           <div className="theme-buttons-container">
-          {/* <ion-icon name="sunny-outline"></ion-icon> */}
+            {/* <ion-icon name="sunny-outline"></ion-icon> */}
             <ion-icon name="moon-outline" id="toggleTheme"></ion-icon>
           </div>
           <div className="theme-switcher-btn">
@@ -180,25 +166,35 @@ function App() {
 
         <Router>
           <div className="homeApp">
-          <Header />
-          <div className="AppContent">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" exact element={<About />} />
-            <Route path="/work" element={<Work />} />
-            <Route path="/resume" element={<Resume />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route
-              path="/convas"
-              element={<Example placement="new titile" />}
-            />
-            <Route path="*" exact element={<NotFound />} />
-          </Routes>
-          <div className="footerIcon"><Footer /></div>
-          
-          </div>
-          
+            <Header />
+            <div className="AppContent">
+              <div className="wrapper">
+                <div className="ribbon-wrapper-green">
+                  <div className="ribbon-green">
+                    {" "}
+                    <a href="https://github.com/kkumar-gcc" target={"_blank"}>
+                      Github
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" exact element={<About />} />
+                <Route path="/work" element={<Work />} />
+                <Route path="/resume" element={<Resume />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route
+                  path="/convas"
+                  element={<Example placement="new titile" />}
+                />
+                <Route path="*" exact element={<NotFound />} />
+              </Routes>
+              <div className="footerIcon">
+                <Footer />
+              </div>
+            </div>
           </div>
         </Router>
       </div>
