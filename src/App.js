@@ -22,7 +22,9 @@ const App = (props)=> {
     const newTheme = theme?false:true;
     //  console.log(newTheme)
      newTheme?document.body.setAttribute("data-theme", "dark"): document.body.removeAttribute("data-theme");
-  
+     document.querySelector(".theme-switcher").classList.remove('active');
+     document.querySelector(".theme-switcher-btn").classList.toggle("active");
+    
     setTheme(newTheme);
     return newTheme;
   }
@@ -146,7 +148,7 @@ const App = (props)=> {
 
     // let darkTheme = true;
 
-    const themeToggle = document.getElementById("toggleTheme");
+    // const themeToggle = document.getElementById("toggleTheme");
     // document.body.setAttribute("data-theme", "dark");
     // themeToggle.addEventListener("click", function () {
       // darkTheme = !darkTheme;
@@ -154,8 +156,8 @@ const App = (props)=> {
       // switchTheme()? document.body.setAttribute("data-theme", "dark"): document.body.removeAttribute("data-theme");
     //   themeToggle.checked = darkTheme;
      
-    //   document.querySelector(".theme-switcher").classList.remove('active');
-    //   document.querySelector(".theme-switcher-btn").classList.toggle("active");
+      // document.querySelector(".theme-switcher").classList.remove('active');
+      // document.querySelector(".theme-switcher-btn").classList.toggle("active");
      
     // });
   });
