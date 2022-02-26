@@ -66,7 +66,7 @@ const Header = (props) => {
             </li>
           </ul>
           <div
-            className={`media_icons ${
+            className={`${
               isNavCollapsed ? "is_active" : ""
             } media_icons`}
           >

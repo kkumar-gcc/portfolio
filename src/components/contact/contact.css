@@ -7,8 +7,8 @@
 }
 
 .contact-container {
-    margin: 10px;
-    padding: 10px;
+    margin: 10px 5px;
+    padding: 10px 5px;
 
 }
 
@@ -24,7 +24,7 @@
 }
 
 .contact-content {
-    padding: 10px;
+    /* padding: 10px; */
     display: flex;
     flex-direction: row;
 
@@ -40,12 +40,12 @@
 .contact-right-container {
     flex: 55%;
     margin: 10px;
-    padding: 10px;
+    padding: 2% 0%;
 }
 
 .contact-form-wrapper {
-    margin: 5px;
-    padding: 10px;
+    margin: 15px 5px;
+    /* padding: 10px; */
 
 }
 
@@ -90,7 +90,7 @@
     position: absolute;
     font-size: 2rem;
     padding: 0 1rem;
-    display: flex;
+    /* display: flex; */
     color: var(--textColor2);
     transition: 0.3s ease;
 }
@@ -126,7 +126,7 @@
 
 .form_input_area:focus {
     outline: none;
-
+    padding: 20px 10px;
     box-shadow: var(--base-shadow);
 }
 @media only screen and (max-width:1150px){

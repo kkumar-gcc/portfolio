@@ -22,25 +22,17 @@ function Work() {
             return (
               <div key={blogDetail.id} className="col-xl-4 col-lg-6 col-md-12 col-sm-12 mb-4">
                 <div className="card">
-                  <div className="thumbnail">
-                    <a href="https://github.com/kkumar-gcc">
-                      <img
+                  <div className="thumbnail" onClick={handleShow}>
+                     <img
                         src={"https://picsum.photos/180/120?person"}
                         alt=""
                       />
-                    </a>
                   </div>
 
-                  <div className="content">
+                  <div className="content" onClick={handleShow}>
                     <h4>
-                      <a
-                        variant="primary"
-                        onClick={handleShow}
-                        className="me-2"
-                        href="https://github.com/kkumar-gcc"
-                      >
                         {truncate(blogDetail.title)}
-                      </a>
+                     
                     </h4>
                   </div>
 

@@ -4,11 +4,11 @@ function About() {
   return (
     <>
       <div className="about-container">
-        <div className="about-title">
-          <h1>About me</h1>
-        </div>
+      <div className="skill-title">
+        <h1>About me</h1>
+      </div>
         <div className="about-content">
-          <div className="about-content-left">
+          <div className="about-content-left ">
             <span>Hi, I'm Krishan kumar and I am a full-stack developer</span>
             <p>
               I was born in Kansas, and like little Ellie, I always dreamed that
@@ -34,13 +34,13 @@ function About() {
         <div className="more-title">
           <h3>What I am Doing</h3>
         </div>
-        <div className="more-content">
-          <div className="more-row">
+        <div className="more-content row">
+          <div className="more-row col-lg-4 col-md-6 col-12">
             <ion-icon name="create-outline"></ion-icon>
             <h3>Web Design Full stack</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore dolorum atque dicta distinctio mollitia fuga.</p>
           </div>
-          <div className="more-row">
+          <div className="more-row col-lg-4 col-md-6 col-12">
             <ion-icon name="logo-designernews"></ion-icon>
             <h3>Web Design Full stack</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore dolorum atque dicta distinctio mollitia fuga.</p>

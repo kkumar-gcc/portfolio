@@ -22,6 +22,7 @@
     "react-scripts": "5.0.0",
     "styled-components": "^5.3.3",
     "typewriter-effect": "^2.18.2",
+    "use-local-storage": "^2.3.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

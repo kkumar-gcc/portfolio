@@ -1,5 +1,4 @@
 // import Header from "./components/header/header";
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
 import Work from "./pages/work";
@@ -8,12 +7,25 @@ import About from "./pages/about";
 import Blog from "./pages/blog";
 import Contact from "./pages/contact";
 import Example from "./pages/Canvas";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import NotFound from "./pages/notfound";
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 
-function App() {
+const App = (props)=> {
+  // const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const [theme, setTheme] = useState(true);
+  // console.log(defaultDark,theme);
+
+ 
+  const switchTheme=()=>{
+    const newTheme = theme?false:true;
+    //  console.log(newTheme)
+     newTheme?document.body.setAttribute("data-theme", "dark"): document.body.removeAttribute("data-theme");
+  
+    setTheme(newTheme);
+    return newTheme;
+  }
   useEffect(() => {
     var cursor = {
       delay: 8,
@@ -131,24 +143,27 @@ function App() {
       document.querySelector(".theme-switcher").classList.toggle("active");
       document.querySelector(".theme-switcher-btn").classList.toggle("active");
     };
-    let darkTheme = false;
+
+    // let darkTheme = true;
 
     const themeToggle = document.getElementById("toggleTheme");
-
-    themeToggle.addEventListener("click", function () {
-      darkTheme = !darkTheme;
-      darkTheme
-        ? document.body.setAttribute("data-theme", "dark")
-        : document.body.removeAttribute("data-theme");
-      themeToggle.checked = darkTheme;
-      document.querySelector(".theme-switcher").classList.remove('active');
-      document.querySelector(".theme-switcher-btn").classList.toggle("active");
+    // document.body.setAttribute("data-theme", "dark");
+    // themeToggle.addEventListener("click", function () {
+      // darkTheme = !darkTheme;
+      // setTheme(darkTheme);
+      // switchTheme()? document.body.setAttribute("data-theme", "dark"): document.body.removeAttribute("data-theme");
+    //   themeToggle.checked = darkTheme;
      
-    });
+    //   document.querySelector(".theme-switcher").classList.remove('active');
+    //   document.querySelector(".theme-switcher-btn").classList.toggle("active");
+     
+    // });
   });
+ 
   return (
     <>
-      <div className="App">
+     {/* data-theme={theme} */}
+  <div className="App">
         {/* <div className="cursor"></div> */}
         <div className="cursor-dot-outline"></div>
         <div className="cursor-dot"></div>
@@ -157,7 +172,9 @@ function App() {
           <h3>THEME</h3>
           <div className="theme-buttons-container">
             {/* <ion-icon name="sunny-outline"></ion-icon> */}
-            <ion-icon name="moon-outline" id="toggleTheme"></ion-icon>
+            <ion-icon name={`${theme ?'sunny-outline':'moon-outline'}`} onClick={()=>{switchTheme()}}  id="toggleTheme"  ></ion-icon>
+            {/* switch to {dataTheme 'moon-outline'?'light':'Light'} Theme */}
+            {/* */}
           </div>
           <div className="theme-switcher-btn">
             <ion-icon name="settings-outline"></ion-icon>

@@ -59,7 +59,7 @@
 }
 
 .title .category-list a {
-  color: #ff014f;
+  color: var(--textColor1);
   display: block;
   font-size: 12px;
   font-weight: 500;
@@ -108,7 +108,7 @@ a:hover {
   padding: 5px;
   margin: 15px auto;
 }
-.card .content h4 a {
+.card .content h4{
   color: var(--color-lightn);
   display: inline-block;
   font-size: 23px;
@@ -117,8 +117,8 @@ a:hover {
   transition: 500ms ease-out;
   text-decoration: none;
 }
-.card .content h4 a:hover {
-  color: #ff014f;
+.card .content h4:hover {
+  color: var(--textColor1);
 }
 /* .row > div[class*='col-'] {
     display: flex;
@@ -140,7 +140,7 @@ a:hover {
   justify-content: space-around;
   align-items: center;
   margin: 20px;
-  padding: 40px;
+  padding: 6%;
   box-shadow: var(--base-shadow);
   transition: box-shadow 0.6s cubic-bezier(0.79, 0.21, 0.06, 0.81);
   border-radius: 10px;

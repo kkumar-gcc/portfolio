@@ -1,7 +1,8 @@
 body {
   --base1: #ebeff3;
   --base2: #c3d0db;
-  --base3: #88a1b7;
+  --base3: #8d9caa;
+  --base4:#929fac;
   --baseDark1: #396387;
   --baseDark2: #204566;
   --baseDark3: #152e44;
@@ -9,7 +10,7 @@ body {
   --primary1: #ffa68b;
   --primary2: #ff7145;
   --primary3: #ff3d00;
-  --textColor1: #ff2a6c;
+  --textColor1: #C84B31;
   --textColor2: #0f0005;
   --textColor3: rgb(236, 232, 232);
   --primaryDark1: #ba2d00;
@@ -20,14 +21,15 @@ body {
 }
 
 [data-theme="dark"] {
-  --base1: #2f4858;
-  --base2: #233541;
-  --base3: #162128;
-  --textColor1: #ff014f;
+  --base1: #5e5e5e;
+  --base2: #474747;
+  --base3: #272727;
+  /* --base4:#252525; */
+  --textColor1: #F36363;
   --textColor2: #462831;
   --textColor3: rgb(59, 59, 59);
   --baseDark1: #eceeef;
-  --baseDark2: #b3bcc2;
+  --baseDark2: #CDC6C6;
   --baseDark3: #7a8a94;
 }
 
@@ -109,7 +111,7 @@ body {
 body {
   margin: 0px;
   padding: 0px;
-  background: var(--base2);
+  background: var(--base3);
   /* background: var(--background-color-2); */
   cursor: none;
 }
@@ -615,7 +617,7 @@ body {
     flex-direction: column;
   }
 
-  .footerIcon{
+  /* .footerIcon{
     display: block;
-  }
+  } */
 }
