@@ -17,7 +17,7 @@ function Footer(){
           style={{ color: "#00acee" }}
         ></ion-icon>
       </a>
-      <a href="https://github.com/kkumar-gcc">
+      <a href="https://www.linkedin.com/in/krishan-kumar-601446211">
         <ion-icon
           name="logo-linkedin"
           style={{ color: "#0e76a8" }}
