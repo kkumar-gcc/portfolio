@@ -1,6 +1,5 @@
 // import Header from "./components/header/header";
 import {
-  BrowserRouter as Router,
   Routes,
   Route,
   useLocation,
