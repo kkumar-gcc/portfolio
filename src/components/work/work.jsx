@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Offcanvas } from "react-bootstrap";
 import "./work.css";
 import BlogData from "./../blog/MOCK_DATA.json";
+
 function truncate(input) {
   return input?.length > 50 ? `${input.substring(0, 49)} . . .` : input;
 }
@@ -13,6 +14,7 @@ function Work() {
 
   return (
     <>
+   
       <div className="skill-title">
         <h1>My Work</h1>
       </div>

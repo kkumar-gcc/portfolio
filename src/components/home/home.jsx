@@ -1,6 +1,6 @@
 import "./home.css";
 import Typewriter from "typewriter-effect";
-function Home() {
+const Home=()=> {
   return (
     <>
       <div className="home-container">
@@ -28,7 +28,7 @@ function Home() {
           <div className="image-container">
             
             <div className="image-inner-container">
-              <img src={"https://picsum.photos/180/240"} alt="" />
+              <img src={"https://picsum.photos/280/340"} alt="" />
             </div>
           </div>
         </div>

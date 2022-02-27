@@ -1,5 +1,5 @@
 import "./header.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // import "react-icons/fa";
 import { ImBlogger } from "react-icons/im";
 import { GoMailRead, GoHome } from "react-icons/go";
@@ -15,7 +15,19 @@ const Header = (props) => {
   const handleNavCollapseClose = () => {
     setIsNavCollapsed(true);
   };
+useEffect(()=>{
+  const menuLinks = document.querySelectorAll(".menu-link");
 
+menuLinks.forEach((link) => {
+	link.addEventListener("click", () => {
+		menuLinks.forEach((link) => {
+			link.classList.remove("nav-active");
+		});
+		link.classList.add("nav-active");
+	});
+});
+
+})
   return (
     <>
       <div>
@@ -44,32 +56,32 @@ const Header = (props) => {
               ></ion-icon>
             </div>
             <li onClick={handleNavCollapseClose}>
-              <Link to="/">
+              <Link to="/" className="menu-link nav-active">
                 <GoHome /> Home
               </Link>
             </li >
             <li onClick={handleNavCollapseClose}>
-              <Link to="/about">
+              <Link to="/about" className="menu-link">
                 <IoPersonOutline /> About
               </Link>
             </li >
             <li onClick={handleNavCollapseClose}>
-              <Link to="/resume">
+              <Link to="/resume" className="menu-link">
                 <BsFillFileBarGraphFill /> Resume
               </Link>
             </li>
             <li onClick={handleNavCollapseClose}>
-              <Link to="/work">
+              <Link to="/work" className="menu-link">
                 <CgToolbox /> Work
               </Link>
             </li>
             <li onClick={handleNavCollapseClose}>
-              <Link to="/blog">
+              <Link to="/blog" className="menu-link">
                 <ImBlogger /> Blog
               </Link>
             </li>
             <li onClick={handleNavCollapseClose}>
-              <Link to="/contact">
+              <Link to="/contact" className="menu-link">
                 <GoMailRead /> Contact
               </Link>
             </li>

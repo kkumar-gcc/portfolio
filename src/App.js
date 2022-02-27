@@ -1,5 +1,10 @@
 // import Header from "./components/header/header";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import Home from "./pages/home";
 import Work from "./pages/work";
 import Resume from "./pages/resume";
@@ -11,23 +16,25 @@ import { useEffect, useState } from "react";
 import NotFound from "./pages/notfound";
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
+import { AnimatePresence } from "framer-motion";
 
-const App = (props)=> {
+const App = (props) => {
   // const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const [theme, setTheme] = useState(true);
   // console.log(defaultDark,theme);
-
- 
-  const switchTheme=()=>{
-    const newTheme = theme?false:true;
+ const location=useLocation();
+  const switchTheme = () => {
+    const newTheme = theme ? false : true;
     //  console.log(newTheme)
-     newTheme?document.body.setAttribute("data-theme", "dark"): document.body.removeAttribute("data-theme");
-     document.querySelector(".theme-switcher").classList.remove('active');
-     document.querySelector(".theme-switcher-btn").classList.toggle("active");
-    
+    newTheme
+      ? document.body.setAttribute("data-theme", "dark")
+      : document.body.removeAttribute("data-theme");
+    document.querySelector(".theme-switcher").classList.remove("active");
+    document.querySelector(".theme-switcher-btn").classList.toggle("active");
+
     setTheme(newTheme);
     return newTheme;
-  }
+  };
   useEffect(() => {
     var cursor = {
       delay: 8,
@@ -145,27 +152,12 @@ const App = (props)=> {
       document.querySelector(".theme-switcher").classList.toggle("active");
       document.querySelector(".theme-switcher-btn").classList.toggle("active");
     };
-
-    // let darkTheme = true;
-
-    // const themeToggle = document.getElementById("toggleTheme");
-    // document.body.setAttribute("data-theme", "dark");
-    // themeToggle.addEventListener("click", function () {
-      // darkTheme = !darkTheme;
-      // setTheme(darkTheme);
-      // switchTheme()? document.body.setAttribute("data-theme", "dark"): document.body.removeAttribute("data-theme");
-    //   themeToggle.checked = darkTheme;
-     
-      // document.querySelector(".theme-switcher").classList.remove('active');
-      // document.querySelector(".theme-switcher-btn").classList.toggle("active");
-     
-    // });
   });
- 
+
   return (
     <>
-     {/* data-theme={theme} */}
-  <div className="App">
+      {/* data-theme={theme} */}
+      <div className="App">
         {/* <div className="cursor"></div> */}
         <div className="cursor-dot-outline"></div>
         <div className="cursor-dot"></div>
@@ -174,7 +166,13 @@ const App = (props)=> {
           <h3>THEME</h3>
           <div className="theme-buttons-container">
             {/* <ion-icon name="sunny-outline"></ion-icon> */}
-            <ion-icon name={`${theme ?'sunny-outline':'moon-outline'}`} onClick={()=>{switchTheme()}}  id="toggleTheme"  ></ion-icon>
+            <ion-icon
+              name={`${theme ? "sunny-outline" : "moon-outline"}`}
+              onClick={() => {
+                switchTheme();
+              }}
+              id="toggleTheme"
+            ></ion-icon>
             {/* switch to {dataTheme 'moon-outline'?'light':'Light'} Theme */}
             {/* */}
           </div>
@@ -183,42 +181,53 @@ const App = (props)=> {
           </div>
         </div>
 
-        <Router>
+        {/* <Router> */}
+          
           <div className="homeApp">
+            {/* <div className="headerDiv"> */}
             <Header />
+            {/* </div> */}
+
             <div className="AppContent">
               <div className="wrapper">
                 <div className="ribbon-wrapper-green">
                   <div className="ribbon-green">
                     {" "}
-                    <a href={"https://github.com/kkumar-gcc"} target={"_blank"} rel="noreferrer">
+                    <a
+                      href={"https://github.com/kkumar-gcc"}
+                      target={"_blank"}
+                      rel="noreferrer"
+                    >
                       Github
                     </a>
                   </div>
                 </div>
               </div>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" exact element={<About />} />
-                <Route path="/work" element={<Work />} />
-                <Route path="/resume" element={<Resume />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route
-                  path="/convas"
-                  element={<Example placement="new titile" />}
-                />
-                <Route path="*" exact element={<NotFound />} />
-              </Routes>
+              {/*  */}
+              <AnimatePresence exitBeforeEnter initial={false}>
+                <Routes location={location} key={location.pathname}>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/about" exact element={<About />} />
+                  <Route path="/work" element={<Work />} />
+                  <Route path="/resume" element={<Resume />} />
+                  <Route path="/blog" element={<Blog />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route
+                    path="/convas"
+                    element={<Example placement="new titile" />}
+                  />
+                  <Route path="*" exact element={<NotFound />} />
+                </Routes>
+              </AnimatePresence>
               <div className="footerIcon">
                 <Footer />
               </div>
             </div>
           </div>
-        </Router>
+        {/* </Router> */}
       </div>
     </>
   );
-}
+};
 
 export default App;

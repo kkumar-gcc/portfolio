@@ -14,6 +14,7 @@ function Blog() {
 
   return (
     <>
+    
       <div className="skill-title">
         <h1>My Blog</h1>
       </div>
