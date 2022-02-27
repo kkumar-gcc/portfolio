@@ -12,6 +12,9 @@ const Header = (props) => {
   const handleNavCollapse = () => {
     setIsNavCollapsed(!isNavCollapsed);
   };
+  const handleNavCollapseClose = () => {
+    setIsNavCollapsed(true);
+  };
 
   return (
     <>
@@ -29,72 +32,79 @@ const Header = (props) => {
 
             <div className="side_bar_toggle" onClick={handleNavCollapse}>
               <ion-icon
-                name={`${isNavCollapsed ? "menu-outline" : "close-outline"}`}
+                name="menu-outline"
               ></ion-icon>
+              {/* {`${isNavCollapsed ? "menu-outline" : "close-outline"}`} */}
             </div>
           </div>
-          <ul className={`${isNavCollapsed ? "is_active" : ""}`}>
-            <li>
+          <ul className={`${isNavCollapsed ? "is_active" : "not_active"}`}>
+          <div className="side_bar_toggle side_bar_toggle2" onClick={handleNavCollapseClose}>
+              <ion-icon
+                name="close-outline"
+              ></ion-icon>
+            </div>
+            <li onClick={handleNavCollapseClose}>
               <Link to="/">
                 <GoHome /> Home
               </Link>
-            </li>
-            <li>
+            </li >
+            <li onClick={handleNavCollapseClose}>
               <Link to="/about">
                 <IoPersonOutline /> About
               </Link>
-            </li>
-            <li>
+            </li >
+            <li onClick={handleNavCollapseClose}>
               <Link to="/resume">
                 <BsFillFileBarGraphFill /> Resume
               </Link>
             </li>
-            <li>
+            <li onClick={handleNavCollapseClose}>
               <Link to="/work">
                 <CgToolbox /> Work
               </Link>
             </li>
-            <li>
+            <li onClick={handleNavCollapseClose}>
               <Link to="/blog">
                 <ImBlogger /> Blog
               </Link>
             </li>
-            <li>
+            <li onClick={handleNavCollapseClose}>
               <Link to="/contact">
                 <GoMailRead /> Contact
               </Link>
             </li>
-          </ul>
-          <div
+            <div
             className={`${
               isNavCollapsed ? "is_active" : ""
-            } media_icons`}
+            } media_icons media_icons2`}
           >
-            <a href="https://github.com/kkumar-gcc">
+            <a href="https://github.com/kkumar-gcc" className="media_icon">
               <ion-icon
                 name="logo-facebook"
                 style={{ color: "#3b5998" }}
               ></ion-icon>
             </a>
-            <a href="https://github.com/kkumar-gcc">
+            <a href="https://github.com/kkumar-gcc" className="media_icon">
               <ion-icon
                 name="logo-twitter"
                 style={{ color: "#00acee" }}
               ></ion-icon>
             </a>
-            <a href="https://www.linkedin.com/in/krishan-kumar-601446211">
+            <a href="https://www.linkedin.com/in/krishan-kumar-601446211" className="media_icon">
               <ion-icon
                 name="logo-linkedin"
                 style={{ color: "#0e76a8" }}
               ></ion-icon>
             </a>
-            <a href="https://github.com/kkumar-gcc">
+            <a href="https://github.com/kkumar-gcc" className="media_icon">
               <ion-icon
                 name="logo-github"
                 style={{ color: "#AD5C51" }}
               ></ion-icon>
             </a>
           </div>
+          </ul>
+         
         </div>
       </div>
     </>

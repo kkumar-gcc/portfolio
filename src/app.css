@@ -2,7 +2,7 @@ body {
   --base1: #ebeff3;
   --base2: #c3d0db;
   --base3: #8d9caa;
-  --base4:#929fac;
+  --base4:#474747;
   --baseDark1: #396387;
   --baseDark2: #204566;
   --baseDark3: #152e44;
@@ -24,7 +24,7 @@ body {
   --base1: #5e5e5e;
   --base2: #474747;
   --base3: #272727;
-  /* --base4:#252525; */
+  --base4:#474747;
   --textColor1: #F36363;
   --textColor2: #462831;
   --textColor3: rgb(59, 59, 59);
@@ -540,7 +540,7 @@ body {
 	color: var(--baseDark2);
 	width: 200px;
 	padding: 10px;
-	z-index: 1000;
+	z-index: 10;
     border-radius: 5px 0px 5px 5px;
 }
 .theme-switcher.active{
