@@ -114,7 +114,7 @@ li {
   border: 2px solid var(--base3);
 }
 .side_bar ul a.nav-active {
-  color: var(--textColor1);
+  /* color: var(--textColor1); */
   border: 2px solid var(--textColor1);
 }
 .side_bar ul a.nav-active:before {
@@ -143,7 +143,7 @@ li {
   font-size: 1rem;
   margin: 10px;
 }
-.side_bar ul a:not(.media_icon):hover,
+/* .side_bar ul a:not(.media_icon):hover, */
 .side_bar_toggle:hover {
   color: var(--textColor1);
 }
