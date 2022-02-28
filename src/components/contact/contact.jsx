@@ -1,7 +1,20 @@
 import React from "react";
 import "./contact.css";
-
+import emailjs from 'emailjs-com';
 function Contact() {
+  function sendEmail(e) {
+    e.preventDefault();    //This is important, i'm not sure why, but the email won't send without it
+
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
+      .then((result) => {
+          window.location.reload()  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior) 
+      }, (error) => {
+          console.log(error.text);
+      });
+  }
+
+
+
   return (
     <>
       <div className="contact-container form-group">
@@ -61,7 +74,7 @@ function Contact() {
 
           <div className="contact-right-container">
             <h5>* Send me a Email</h5>
-            <form>
+            <form onSubmit={sendEmail}>
               <div className="contact-form-wrapper search">
                 <input
                   type="text"
