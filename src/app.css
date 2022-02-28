@@ -611,7 +611,9 @@ input {
     /* flex-direction: column-reverse; */
     flex-direction: column;
   }
-
+.AppContent{
+  width: auto;
+}
   /* .footerIcon{
     display: block;
   } */

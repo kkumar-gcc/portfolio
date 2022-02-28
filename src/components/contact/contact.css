@@ -184,6 +184,32 @@
   padding: 20px 10px;
   box-shadow: var(--base-shadow);
 }
+.form_input_submit{
+  width: 100%;
+
+  border: none;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  padding: 15px;
+  border: 2px solid var(--base4);
+  box-shadow: var(--base-shadow-neutral-active);
+  background: none;
+  font-family: inherit;
+  color: var(--textColor1);
+  transition: all 0.5s ease;
+}
+
+.form_input_submit::-ms-value {
+  color: var(--greyLight-3);
+}
+
+.form_input_submit:focus {
+  outline: none;
+  padding: 20px 10px;
+  box-shadow: var(--base-shadow);
+}
+
 @media only screen and (max-width: 1150px) {
   .contact-content {
     flex-direction: column;
