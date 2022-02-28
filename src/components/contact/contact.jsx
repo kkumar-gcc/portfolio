@@ -75,11 +75,12 @@ function Contact() {
           <div className="contact-right-container">
             <h5>* Send me a Email</h5>
             <form onSubmit={sendEmail}>
-              <div className="contact-form-wrapper search">
+              <div className="contact-form-wrapper search" >
                 <input
                   type="text"
                   className="form_input"
-                  placeholder="YOUR NAME"
+                  placeholder="YOUR NAME(DISABLED)"
+                  disabled="disabled"
                 />
                 <div className="form_icon">
                   <ion-icon name="person-outline"></ion-icon>
@@ -89,7 +90,8 @@ function Contact() {
                 <input
                   type="email"
                   className="form_input"
-                  placeholder="YOUR EMAIL"
+                  placeholder="YOUR EMAIL(DISABLED)"
+                  disabled="disabled"
                 />
                 <div className="form_icon">
                   <ion-icon name="mail-outline"></ion-icon>
@@ -99,7 +101,8 @@ function Contact() {
                 <input
                   type="text"
                   className="form_input"
-                  placeholder="YOUR SUBJECT"
+                  placeholder="YOUR SUBJECT(DISABLED)"
+                  disabled="disabled"
                 />
                 <div className="form_icon">
                   <ion-icon name="reader-outline"></ion-icon>
@@ -113,7 +116,8 @@ function Contact() {
                   cols="30"
                   rows="30"
                   className="form_input_area"
-                  placeholder="YOUR MESSAGE...."
+                  placeholder="YOUR MESSAGE....(DISABLED)"
+                  disabled="disabled"
                 ></textarea>
               </div>
               <div className="contact-form-wrapper submit-form">
@@ -121,6 +125,8 @@ function Contact() {
                   type="submit"
                   className="form_input_submit"
                   value={"Submit"}
+                  // (DISABLED)
+                  disabled="disabled"
                 />
                
               </div>
