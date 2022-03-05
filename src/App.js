@@ -215,7 +215,7 @@ const App = (props) => {
                     path="/convas"
                     element={<Example placement="new titile" />}
                   />
-                  <Route path="*" exact element={<NotFound />} />
+                  <Route path="/*" element={<NotFound />} />
                 </Routes>
               </AnimatePresence>
               <div className="footerIcon">
