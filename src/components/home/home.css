@@ -1,95 +1,46 @@
-@import url("../../app.css");
+import "./home.css";
+import Typewriter from "typewriter-effect";
+const Home = () => {
+  return (
+    <>
+     <div>
+        <div className="title-hide" id="hideDiv">
+          <div className="px-2">
+             <span className="home-subtitle">Welcome to my portfolio</span>
+          </div>
+        </div>
+        <div className="home-container">
+        <div className="home-left-container">
+         
+          <h1>
+            <span className="home-title-name">Krishan Kumar</span>
+          </h1>
+          <span className="article"> a </span>
+          <Typewriter
+            options={{
+              strings: ["Developer.", "Professional Coder.", "Designer."],
+              autoStart: true,
+              loop: true,
+            }}
+          />
+          {/* <p className="desc">
+            I'm a Tunisian based web designer & front‑end developer focused on
+            crafting clean & user‑friendly experiences, I am passionate about
+            building excellent software that improves the lives of those around
+            me.
+          </p> */}
+        </div>
+        <div className="home-right-container">
+          <div className="image-container">
+            <div className="image-inner-container">
+              <img src={"https://picsum.photos/280/340"} alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </>
+  );
+};
 
-.home-container {
-  margin-top: 10px;
-  padding-top: 10px;
-  color: var(--baseDark2);
-  /* font-family: var(--font-secondary); */
-  display: flex;
-  flex-direction: row;
-}
-
-.home-left-container {
-  flex: 60%;
-  padding: clamp(5px, 10vw, 30px);
-  margin: 60px 10px 15px 10px;
-  text-align: justify;
-}
-
-.home-right-container {
-  flex: 40%;
-  padding: clamp(5px, 10vw, 30px);
-margin: 60px 10px 15px 10px;
-}
-
-.home-container .home-left-container .home-subtitle {
-font-family: var(--font-secondary);
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 3px;
-  margin-bottom: 20px;
- 
-  text-transform: uppercase;
-}
-
-.home-container .home-left-container h1 {
-  /* font-size: 50px; */
-  font-size: clamp(20px, 10vw, 50px);
-  font-weight: 700;
-  color: var(--baseDark2);
-}
-
-/* h1 {
-  
-  } */
-.home-container .home-left-container .article {
-  font-size: 30px;
- color: var(--baseDark2);
-}
-
-.home-container .home-left-container .home-title-name {
-  
-  color: var(--textColor1);
-}
-
-.home-container .home-left-container .desc {
-  margin-top: 2%;
-  font-size: 20px;
-  letter-spacing: 2px;
-  line-height: 1.2;
-}
-
-.Typewriter {
-  display: inline-block;
-  font-size: 30px;
-  margin-top: 5px;
-}
-
-.Typewriter span {
-  color: var(--textColor1);
-}
-
-
-.home-right-container .image-container {
-  padding: clamp(5px, 10vw, 10px);
-  margin: 5px;
-}
-
-.home-right-container .image-container .image-inner-container {
-  background: var(--background-color-1);
-  text-align: center;
-}
-
-.home-right-container .image-container .image-inner-container img {
-  width: 100%;
-  max-height: 100%;
-  border-radius: 10px;
-  box-shadow: var(--base-shadow-active);
-
-}
-
-@media only screen and (max-width: 800px) {
-  .home-container {
-    flex-direction: column-reverse;
-  }
-}
+export default Home;
