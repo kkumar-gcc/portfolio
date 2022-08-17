@@ -8,7 +8,6 @@ function About() {
       </div>
         <div className="about-content">
           <div className="about-content-left ">
-            <span>Hi, I'm Krishan kumar and I am a full-stack developer</span>
             <p>
               I was born in Kansas, and like little Ellie, I always dreamed that
               a hurricane would take me somewhere to another country. And once I
