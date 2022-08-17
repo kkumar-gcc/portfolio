@@ -39,7 +39,7 @@ menuLinks.forEach((link) => {
               </a>
             </div>
             <div className="username">
-              <span>Krishan </span>
+              <span> Name </span>
             </div>
 
             <div className="side_bar_toggle" onClick={handleNavCollapse}>
